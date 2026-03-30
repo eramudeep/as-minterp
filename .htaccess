@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Block all requests when the Laravel root is accidentally used as the web
+    # root – the server must be configured to serve from the "public/" sub-directory.
+    RewriteRule ^ - [F,L]
+</IfModule>
